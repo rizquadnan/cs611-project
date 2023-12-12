@@ -235,7 +235,7 @@ int main()
 
   cout << "Gutenberg" << endl;
   cout << "2.3m" << endl;
-  for (size_t i = 0; i < 10; i++)
+  for (size_t i = 0; i < 3; i++)
   {
     driver("./datasets/GutenbergWordsFile.txt");
   }
