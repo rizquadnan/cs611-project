@@ -106,7 +106,7 @@ void quickSortRc(string *A, int l, int h)
     }
 }
 
-void driver(string inFile)
+void driver(string inFile, int threshold)
 {
     string myText;
     ifstream myReadFile(inFile);
@@ -192,7 +192,7 @@ void driver(string inFile)
         int end = markers[looper][1];
         int counter = markers[looper][2];
 
-        if (counter > 15)
+        if (counter >= threshold)
         {
             quickSort(inlineArr, begin, end - 1);
             // quickSortRc(inlineArr, begin, end - 1);
@@ -227,14 +227,19 @@ void driver(string inFile)
     // // myFile.close();
 }
 
-int main()
+int main(int argc, char* argv[])
 {
+    if (argc == 1) {
+        cout << "Please provide the minimum threshold to apply Binary Search Tweak" << endl;
+        return 1;
+    }
 
     cout << "Gutenberg" << endl;
+    cout << "Binary Search Threshold: " << argv[1] << endl;
     cout << "2.3m" << endl;
     for (size_t i = 0; i < 3; i++)
     {
-        driver("./datasets/GutenbergWordsFile.txt");
+        driver("./datasets/GutenbergWordsFile.txt", atoi(argv[1]));
     }
     // cout << "1k" << endl;
     // for (size_t i = 0; i < 10; i++)
