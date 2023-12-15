@@ -230,12 +230,12 @@ void driver(string inFile, int threshold)
 int main(int argc, char* argv[])
 {
     if (argc == 1) {
-        cout << "Please provide the minimum threshold to apply Binary Search Tweak" << endl;
+        cout << "Please provide the maximum threshold to apply insertion sort" << endl;
         return 1;
     }
 
     cout << "Gutenberg" << endl;
-    cout << "Binary Search Threshold: " << argv[1] << endl;
+    cout << "Insertion Sort Threshold: " << argv[1] << endl;
     cout << "2.3m" << endl;
     for (size_t i = 0; i < 3; i++)
     {

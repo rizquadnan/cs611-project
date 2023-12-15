@@ -145,7 +145,7 @@ int binarySearch(string arr[], string x, int l, int r)
   return -1;
 }
 
-void driver(string inFile)
+void driver(string inFile, int threshold)
 {
   // cout << "searchTarget: " << searchTarget << endl;
 
@@ -233,7 +233,7 @@ void driver(string inFile)
     int end = markers[asciiKey][1];
 
     int targetIndex = -1;
-    if (end - begin > 8)
+    if (end - begin > threshold)
     {
       targetIndex = binarySearch(inlineArr, searchTarget, begin, end);
     }
@@ -267,13 +267,20 @@ void driver(string inFile)
   }
 }
 
-int main()
+int main(int argc, char* argv[])
 {
+  if (argc == 1)
+  {
+    cout << "Please provide the maximum threshold to apply linear search" << endl;
+    return 1;
+  }
+
   cout << "Gutenberg" << endl;
+  cout << "Linear Search Threshold: " << argv[1] << endl;
   cout << "2.3m" << endl;
   for (size_t i = 0; i < 3; i++)
   {
-    driver("./datasets/GutenbergWordsFile.txt");
+    driver("./datasets/GutenbergWordsFile.txt", atoi(argv[1]));
   }
 
   // cout << "1k" << endl;
