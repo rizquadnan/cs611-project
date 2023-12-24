@@ -275,53 +275,26 @@ int main(int argc, char* argv[])
     return 1;
   }
 
-  cout << "Gutenberg" << endl;
   cout << "Linear Search Threshold: " << argv[1] << endl;
-  cout << "2.3m" << endl;
+
+  cout << "1k" << endl;
   for (size_t i = 0; i < 3; i++)
   {
-    driver("./datasets/GutenbergWordsFile.txt", atoi(argv[1]));
+    driver("./datasets/guttenberg_1k.txt", atoi(argv[1]));
   }
-
-  // cout << "1k" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("./datasets/1k.txt");
-  // }
-
-  // cout << "10k" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("./datasets/10k.txt");
-  // }
-
-  // cout << "100k" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("./datasets/100k.txt");
-  // }
-
-  // cout << "1m" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("./datasets/1m.txt");
-  // }
-
-  // cout << "2m" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //     driver("../2m.txt");
-  // }
-  // cout << "3m" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //     driver("../3m.txt");
-  // }
-  // cout << "10m" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //     driver("../10m.txt");
-  // }
-
-  // system("pause");
+  cout << "10k" << endl;
+  for (size_t i = 0; i < 3; i++)
+  {
+    driver("./datasets/guttenberg_10k.txt", atoi(argv[1]));
+  }
+  cout << "100k" << endl;
+  for (size_t i = 0; i < 3; i++)
+  {
+    driver("./datasets/guttenberg_100k.txt", atoi(argv[1]));
+  }
+  cout << "1m" << endl;
+  for (size_t i = 0; i < 3; i++)
+  {
+    driver("./datasets/guttenberg_1m.txt", atoi(argv[1]));
+  }
 }
