@@ -210,54 +210,24 @@ void driver(string inFile)
 
 int main()
 {
-
-  cout << "Gutenberg" << endl;
-  cout << "2.3m" << endl;
+  cout << "1k" << endl;
   for (size_t i = 0; i < 3; i++)
   {
-    driver("./datasets/GutenbergWordsFile.txt");
+    driver("./datasets/guttenberg_1k.txt");
   }
-
-  // cout << "1k" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("./datasets/1k.txt");
-  // }
-
-  // cout << "10k" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("./datasets/10k.txt");
-  // }
-
-  // cout << "100k" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("./datasets/100k.txt");
-  // }
-
-  // cout << "1m" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //   driver("../1m.txt");
-  // }
-
-  // cout << "2m" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //     driver("../2m.txt");
-  // }
-  // cout << "3m" << endl;
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //     driver("../3m.txt");
-  // }
-  // cout << "10m" << endl;
-  // randomStrings = getRandomStringsFromFile("../1k.txt", 10);
-  // for (size_t i = 0; i < 10; i++)
-  // {
-  //     driver("../10m.txt");
-  // }
-
-  // system("pause");
+  cout << "10k" << endl;
+  for (size_t i = 0; i < 3; i++)
+  {
+    driver("./datasets/guttenberg_10k.txt");
+  }
+  cout << "100k" << endl;
+  for (size_t i = 0; i < 3; i++)
+  {
+    driver("./datasets/guttenberg_100k.txt");
+  }
+  cout << "1m" << endl;
+  for (size_t i = 0; i < 3; i++)
+  {
+    driver("./datasets/guttenberg_1m.txt");
+  }
 }
