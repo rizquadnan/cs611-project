@@ -214,32 +214,32 @@ void driver(string inFile)
 
 int main()
 {
-    cout << "Gutenberg" << endl;
-    cout << "2.3m" << endl;
+    // cout << "Gutenberg" << endl;
+    // cout << "2.3m" << endl;
+    // for (size_t i = 0; i < 3; i++)
+    // {
+    //     driver("./datasets/GutenbergWordsFile.txt");
+    // }    
+    cout << "1k" << endl;
     for (size_t i = 0; i < 3; i++)
     {
-        driver("./datasets/GutenbergWordsFile.txt");
-    }    
-    // cout << "1k" << endl;
-    // for (size_t i = 0; i < 10; i++)
-    // {
-    //     driver("./datasets/1k.txt");
-    // }
-    // cout << "10k" << endl;
-    // for (size_t i = 0; i < 10; i++)
-    // {
-    //     driver("./datasets/10k.txt");
-    // }
-    // cout << "100k" << endl;
-    // for (size_t i = 0; i < 10; i++)
-    // {
-    //     driver("./datasets/100k.txt");
-    // }
-    // cout << "1m" << endl;
-    // for (size_t i = 0; i < 10; i++)
-    // {
-    //     driver("./datasets/1m.txt");
-    // }
+        driver("./datasets/guttenberg_1k.txt");
+    }
+    cout << "10k" << endl;
+    for (size_t i = 0; i < 3; i++)
+    {
+        driver("./datasets/guttenberg_10k.txt");
+    }
+    cout << "100k" << endl;
+    for (size_t i = 0; i < 3; i++)
+    {
+        driver("./datasets/guttenberg_100k.txt");
+    }
+    cout << "1m" << endl;
+    for (size_t i = 0; i < 3; i++)
+    {
+        driver("./datasets/guttenberg_1m.txt");
+    }
     // cout << "2m" << endl;
     // for (size_t i = 0; i < 10; i++)
     // {
